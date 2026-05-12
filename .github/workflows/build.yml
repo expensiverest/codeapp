@@ -29,7 +29,7 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             PROVISIONING_PROFILE="" \
             ASSETCATALOG_COMPILER_OPTIMIZATION=nothing \
-            ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon
+            ASSETCATALOG_COMPILER_APPICON_NAME=""
 
       - name: Package IPA
         run: |
