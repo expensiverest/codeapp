@@ -20,7 +20,7 @@ jobs:
         run: |
           xcodebuild archive \
             -project Code.xcodeproj \
-            -scheme CodeApp \
+            -scheme Code \
             -configuration Release \
             -destination 'generic/platform=iOS' \
             -archivePath $PWD/build/CodeApp.xcarchive \
