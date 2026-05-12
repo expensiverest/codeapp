@@ -16,6 +16,9 @@ jobs:
       - name: Download Frameworks
         run: ./downloadFrameworks.sh
 
+      - name: List Schemes
+        run: xcodebuild -project Code.xcodeproj -list
+
       - name: Build Archive
         run: |
           xcodebuild archive \
