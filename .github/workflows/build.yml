@@ -27,12 +27,13 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            PROVISIONING_PROFILE=""
+            PROVISIONING_PROFILE="" \
+            ASSETCATALOG_COMPILER_OPTIMIZATION=nothing
 
       - name: Package IPA
         run: |
           mkdir -p build/Payload
-          cp -r build/CodeApp.xcarchive/Products/Applications/CodeApp.app build/Payload/
+          cp -r build/CodeApp.xcarchive/Products/Applications/Code.app build/Payload/
           cd build
           zip -r CodeApp.ipa Payload
 
