@@ -16,14 +16,11 @@ jobs:
       - name: Download Frameworks
         run: ./downloadFrameworks.sh
 
-      - name: List Schemes
-        run: xcodebuild -project Code.xcodeproj -list
-
       - name: Build Archive
         run: |
           xcodebuild archive \
             -project Code.xcodeproj \
-            -scheme Code \
+            -scheme "Code App" \
             -configuration Release \
             -destination 'generic/platform=iOS' \
             -archivePath $PWD/build/CodeApp.xcarchive \
